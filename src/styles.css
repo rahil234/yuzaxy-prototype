@@ -271,12 +271,15 @@ body {
 .content-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 1.5rem;
-    background: var(--card-bg);
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    padding: 0 0.5rem;
+}
+
+.content-header h2 {
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    margin: 0;
 }
 
 .product-count {
