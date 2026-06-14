@@ -24,6 +24,92 @@ body {
     line-height: 1.5;
 }
 
+/* Contact Card Section */
+.contact-card-section {
+    padding: 4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 2.5rem;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-box {
+    background-color: rgba(13, 148, 136, 0.1);
+    color: var(--accent-color);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.contact-item span {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.large-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .contact-details {
+        flex-direction: row;
+    }
+}
+
 /* Header */
 .b2b-header {
     background-color: var(--card-bg);
@@ -156,6 +242,25 @@ body {
 .category-list li.active {
     color: var(--accent-color);
     font-weight: 600;
+}
+
+.category-select {
+    display: none;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    background-color: #fff;
+    color: var(--text-primary);
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
 }
 
 /* Main Content */
@@ -297,4 +402,220 @@ body {
     border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
     margin-top: 2rem;
+}
+
+/* Product Detail View */
+.hidden {
+    display: none !important;
+}
+
+.product-detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    min-height: 60vh;
+}
+
+.detail-header {
+    margin-bottom: 2rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: var(--accent-color);
+}
+
+.detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    .detail-layout {
+        flex-direction: row;
+        padding: 3rem;
+    }
+}
+
+.detail-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+}
+
+.detail-image-wrapper img {
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.detail-info-wrapper {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-title {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.detail-category {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(13, 148, 136, 0.1);
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+.detail-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.detail-stock {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.detail-stock.in-stock {
+    color: #059669;
+}
+
+.detail-stock.out-of-stock {
+    color: #dc2626;
+}
+
+.detail-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.detail-action .whatsapp-btn {
+    display: inline-flex;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+.detail-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+}
+
+/* Mobile Responsiveness enhancements */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .marketplace-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 0.5rem 1rem 1.5rem 1rem;
+        border: none;
+        background: transparent;
+    }
+
+    .category-list {
+        display: none;
+    }
+
+    .category-select {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .product-card {
+        padding: 0.75rem;
+    }
+
+    .product-title {
+        font-size: 0.9rem;
+        height: 2.6em;
+    }
+
+    .product-price {
+        font-size: 1.1rem;
+    }
+
+    .product-category {
+        font-size: 0.75rem;
+    }
+
+    .whatsapp-btn {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .whatsapp-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-price {
+        font-size: 1.5rem;
+    }
 }
