@@ -191,7 +191,17 @@ window.sendToWhatsApp = function (productId) {
     const product = products.find(p => p.id === productId);
     if (!product || !product.inStock) return;
 
-    const message = `Hello Yuzaxy team! I'm interested in purchasing the "${product.title}" listed for ${product.price}. Could you provide more details?`;
+    // Resolve the absolute URL so WhatsApp can generate an image preview
+    const imageUrl = new URL(product.image, window.location.href).href;
+
+    const message = `*New Product Inquiry*
+
+*Product Name:* ${product.title}
+*Category:* ${product.category}
+*Price:* ${product.price}
+*Image Link:* ${imageUrl}
+
+Hello Yuzaxy team, I am interested in this product and would like more details.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
