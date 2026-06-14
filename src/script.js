@@ -83,7 +83,7 @@ const products = [
     }
 ];
 
-const phoneNumber = "919995898268";
+const phoneNumber = "919846196746";
 
 let currentCategory = "All Categories";
 let searchQuery = "";
